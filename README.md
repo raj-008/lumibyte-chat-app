@@ -50,7 +50,7 @@ npm install
 - Create a .env file in the backend folder.
 - Copy the contents from .env.example and update the values as needed:
 ```bash
-Create .env file and set environment varible of .env.example
+cp .env.example .env
 ```
 
 4. Start the backend server:
