@@ -26,8 +26,8 @@ app.use("*name", (req, res, next) => {
 // app error handling
 app.use(globalErrorhandler);
 
-// Creating Serevr
-const port = process.env.PORT;
+// Creating Server
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
   console.log(`App is running on : ${port}`);

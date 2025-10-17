@@ -21,12 +21,12 @@ exports.startChat = asyncErrorHandler(async (req, res) => {
 
 exports.askQuestion = asyncErrorHandler(async (req, res, next) => {
   const { sessionId } = req.params;
-  const { question } = req.body;
+  const { question } = req.body;  
 
   const session = sessions.find((s) => s.id === sessionId);
-  if (!session) return next(new CustomError("Session not found", 404));
+  if (!session) return next(new CustomError("Session not found, Create new chat", 404));
 
-  const response = mockData.responses.find((r) => r.question.toLowerCase() === question.toLowerCase()) || { answer: { description: "Sorry, No data found for your query.", table: [] } };
+  const response = mockData.responses.find((r) => r.question.toLowerCase() === question.toLowerCase()) || { answer: { description: "Sorry, No data found for your query. Try using one of the predefined questions to get a mock response", table: [] } };
 
   session.history.push({ id: Date.now(), role: "user", content: question });
   session.history.push({ id: Date.now(), role: "bot", content: response.answer.description, table: response.answer.table });
@@ -43,7 +43,7 @@ exports.getSessions = asyncErrorHandler(async (req, res) => {
 exports.getSessionHistory = asyncErrorHandler(async (req, res, next) => {
   const { sessionId } = req.params;
   const session = sessions.find((s) => s.id === sessionId);
-  if (!session) return next(new CustomError("Session not found", 404));
+  if (!session) return next(new CustomError("Session not found, Create new chat", 404));
 
   return sendResponse(res, "Session history retrived successfully", session.history);
 });
@@ -53,7 +53,7 @@ exports.likeDislikeResponse = asyncErrorHandler(async (req, res, next) => {
   const { messageId, isliked } = req.body;
 
   const session = sessions.find((s) => s.id === sessionId);
-  if (!session) return next(new CustomError("Session not found", 404));
+  if (!session) return next(new CustomError("Session not found, Create new chat", 404));
 
   const response = session.history.find((message) => message.id === messageId && message.role === "bot");
   if (!response) return next(new CustomError("Message not found", 404));
