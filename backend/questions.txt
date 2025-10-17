@@ -1,0 +1,20 @@
+1) What are the top-selling products this month?
+2) Which region generated the highest revenue?
+3) Show monthly sales summary for 2025.
+4) Which sales rep achieved the highest target?
+5) Compare Q1 vs Q2 revenue growth.
+6) Show product-wise profit margins.
+7) List top 10 customers by purchase value.
+8) What is the average order value this year?
+9) Show daily sales trend for the past week.
+10) Which category had the lowest sales last quarter?
+11) Show refund or return statistics.
+12) Display sales by payment method.
+13) Which country contributed most to total revenue?
+14) Provide sales conversion rate by channel.
+15) What are the top-performing marketing campaigns?
+16) How many new customers were acquired each month?
+17) Show inventory vs sales comparison.
+18) Which salesperson has the highest customer satisfaction?
+19) Show yearly revenue forecast.
+20) Which products are frequently bought together?

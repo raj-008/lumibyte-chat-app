@@ -1,0 +1,228 @@
+{
+  "responses": [
+    {
+      "question": "What are the top-selling products this month?",
+      "answer": {
+        "description": "These are the products with the highest total sales for the current month.",
+        "table": [
+          { "Rank": 1, "Product": "Wireless Earbuds", "Units Sold": 1240, "Revenue ($)": 37200 },
+          { "Rank": 2, "Product": "Smartwatch", "Units Sold": 980, "Revenue ($)": 44100 },
+          { "Rank": 3, "Product": "Laptop Sleeve", "Units Sold": 870, "Revenue ($)": 13050 }
+        ]
+      }
+    },
+    {
+      "question": "Which region generated the highest revenue?",
+      "answer": {
+        "description": "Regional breakdown of total revenue for this quarter.",
+        "table": [
+          { "Region": "North America", "Revenue ($)": 125000, "Growth %": 8.5 },
+          { "Region": "Europe", "Revenue ($)": 108400, "Growth %": 6.9 },
+          { "Region": "Asia-Pacific", "Revenue ($)": 99800, "Growth %": 10.2 }
+        ]
+      }
+    },
+    {
+      "question": "Show monthly sales summary for 2025.",
+      "answer": {
+        "description": "Monthly summary of sales orders and revenue for 2025.",
+        "table": [
+          { "Month": "January", "Orders": 2100, "Revenue ($)": 84000 },
+          { "Month": "February", "Orders": 1980, "Revenue ($)": 79200 },
+          { "Month": "March", "Orders": 2210, "Revenue ($)": 88400 }
+        ]
+      }
+    },
+    {
+      "question": "Which sales rep achieved the highest target?",
+      "answer": {
+        "description": "Top-performing sales representatives based on target achievement.",
+        "table": [
+          { "Rep": "Ananya Patel", "Target ($)": 50000, "Achieved ($)": 56000, "Achievement %": 112 },
+          { "Rep": "John Smith", "Target ($)": 48000, "Achieved ($)": 50500, "Achievement %": 105 },
+          { "Rep": "Rahul Mehta", "Target ($)": 45000, "Achieved ($)": 46000, "Achievement %": 102 }
+        ]
+      }
+    },
+    {
+      "question": "Compare Q1 vs Q2 revenue growth.",
+      "answer": {
+        "description": "Quarterly comparison of revenue performance for 2025.",
+        "table": [
+          { "Quarter": "Q1", "Revenue ($)": 250000, "Growth %": 5.2 },
+          { "Quarter": "Q2", "Revenue ($)": 274000, "Growth %": 9.6 }
+        ]
+      }
+    },
+    {
+      "question": "Show product-wise profit margins.",
+      "answer": {
+        "description": "Profit margin comparison across top-selling products.",
+        "table": [
+          { "Product": "Wireless Earbuds", "Cost ($)": 20, "Selling Price ($)": 30, "Profit Margin %": 33.3 },
+          { "Product": "Smartwatch", "Cost ($)": 40, "Selling Price ($)": 55, "Profit Margin %": 27.3 },
+          { "Product": "Power Bank", "Cost ($)": 10, "Selling Price ($)": 16, "Profit Margin %": 37.5 }
+        ]
+      }
+    },
+    {
+      "question": "List top 10 customers by purchase value.",
+      "answer": {
+        "description": "Customers ranked by total purchase value during the last quarter.",
+        "table": [
+          { "Rank": 1, "Customer": "TechZone Ltd", "Total Purchases ($)": 85000 },
+          { "Rank": 2, "Customer": "Urban Mart", "Total Purchases ($)": 73400 },
+          { "Rank": 3, "Customer": "QuickBuy", "Total Purchases ($)": 69000 }
+        ]
+      }
+    },
+    {
+      "question": "What is the average order value this year?",
+      "answer": {
+        "description": "Average value of each customer order in 2025.",
+        "table": [
+          { "Month": "January", "Orders": 2100, "Average Order Value ($)": 40 },
+          { "Month": "February", "Orders": 1980, "Average Order Value ($)": 41 },
+          { "Month": "March", "Orders": 2210, "Average Order Value ($)": 39 }
+        ]
+      }
+    },
+    {
+      "question": "Show daily sales trend for the past week.",
+      "answer": {
+        "description": "Daily revenue performance over the last 7 days.",
+        "table": [
+          { "Date": "2025-10-10", "Revenue ($)": 6200 },
+          { "Date": "2025-10-11", "Revenue ($)": 6700 },
+          { "Date": "2025-10-12", "Revenue ($)": 5900 },
+          { "Date": "2025-10-13", "Revenue ($)": 7200 },
+          { "Date": "2025-10-14", "Revenue ($)": 7650 },
+          { "Date": "2025-10-15", "Revenue ($)": 8100 },
+          { "Date": "2025-10-16", "Revenue ($)": 8450 }
+        ]
+      }
+    },
+    {
+      "question": "Which category had the lowest sales last quarter?",
+      "answer": {
+        "description": "Categories ranked by total sales for the last quarter.",
+        "table": [
+          { "Category": "Accessories", "Revenue ($)": 18500 },
+          { "Category": "Software", "Revenue ($)": 22300 },
+          { "Category": "Electronics", "Revenue ($)": 45600 }
+        ]
+      }
+    },
+    {
+      "question": "Show refund or return statistics.",
+      "answer": {
+        "description": "Return and refund data by category for Q3 2025.",
+        "table": [
+          { "Category": "Electronics", "Refund Count": 45, "Refund %": 1.9 },
+          { "Category": "Accessories", "Refund Count": 20, "Refund %": 0.9 },
+          { "Category": "Home Appliances", "Refund Count": 32, "Refund %": 1.5 }
+        ]
+      }
+    },
+    {
+      "question": "Display sales by payment method.",
+      "answer": {
+        "description": "Distribution of revenue by payment mode.",
+        "table": [
+          { "Payment Method": "Credit Card", "Revenue ($)": 148000, "Share %": 47.5 },
+          { "Payment Method": "UPI", "Revenue ($)": 95000, "Share %": 30.4 },
+          { "Payment Method": "PayPal", "Revenue ($)": 69000, "Share %": 22.1 }
+        ]
+      }
+    },
+    {
+      "question": "Which country contributed most to total revenue?",
+      "answer": {
+        "description": "Country-wise revenue distribution for FY2025.",
+        "table": [
+          { "Country": "USA", "Revenue ($)": 198000 },
+          { "Country": "India", "Revenue ($)": 112000 },
+          { "Country": "Germany", "Revenue ($)": 96000 }
+        ]
+      }
+    },
+    {
+      "question": "Provide sales conversion rate by channel.",
+      "answer": {
+        "description": "Conversion rates from website, mobile app, and ads.",
+        "table": [
+          { "Channel": "Website", "Visitors": 120000, "Orders": 4200, "Conversion %": 3.5 },
+          { "Channel": "Mobile App", "Visitors": 95000, "Orders": 3900, "Conversion %": 4.1 },
+          { "Channel": "Ads Campaigns", "Visitors": 68000, "Orders": 1750, "Conversion %": 2.6 }
+        ]
+      }
+    },
+    {
+      "question": "What are the top-performing marketing campaigns?",
+      "answer": {
+        "description": "Campaigns sorted by ROI and engagement rate.",
+        "table": [
+          { "Campaign": "Summer Sale 2025", "ROI %": 150, "Engagement %": 12.4 },
+          { "Campaign": "Back to School", "ROI %": 120, "Engagement %": 9.7 },
+          { "Campaign": "Holiday Offers", "ROI %": 135, "Engagement %": 10.3 }
+        ]
+      }
+    },
+    {
+      "question": "How many new customers were acquired each month?",
+      "answer": {
+        "description": "Customer acquisition count per month for 2025.",
+        "table": [
+          { "Month": "January", "New Customers": 640 },
+          { "Month": "February", "New Customers": 590 },
+          { "Month": "March", "New Customers": 720 }
+        ]
+      }
+    },
+    {
+      "question": "Show inventory vs sales comparison.",
+      "answer": {
+        "description": "Comparison of stock levels and sold units for top products.",
+        "table": [
+          { "Product": "Smartwatch", "In Stock": 450, "Sold": 980 },
+          { "Product": "Wireless Earbuds", "In Stock": 370, "Sold": 1240 },
+          { "Product": "Power Bank", "In Stock": 620, "Sold": 760 }
+        ]
+      }
+    },
+    {
+      "question": "Which salesperson has the highest customer satisfaction?",
+      "answer": {
+        "description": "Sales reps ranked by customer satisfaction score.",
+        "table": [
+          { "Rep": "Ananya Patel", "Satisfaction Score": 9.5 },
+          { "Rep": "John Smith", "Satisfaction Score": 9.3 },
+          { "Rep": "Emily Brown", "Satisfaction Score": 9.1 }
+        ]
+      }
+    },
+    {
+      "question": "Show yearly revenue forecast.",
+      "answer": {
+        "description": "Projected revenue for the upcoming year based on trend analysis.",
+        "table": [
+          { "Quarter": "Q1 2026", "Projected Revenue ($)": 275000 },
+          { "Quarter": "Q2 2026", "Projected Revenue ($)": 298000 },
+          { "Quarter": "Q3 2026", "Projected Revenue ($)": 312000 },
+          { "Quarter": "Q4 2026", "Projected Revenue ($)": 325000 }
+        ]
+      }
+    },
+    {
+      "question": "Which products are frequently bought together?",
+      "answer": {
+        "description": "Common product pairings based on customer purchase patterns.",
+        "table": [
+          { "Product A": "Laptop", "Product B": "Wireless Mouse", "Frequency %": 68 },
+          { "Product A": "Smartwatch", "Product B": "Screen Protector", "Frequency %": 52 },
+          { "Product A": "Earbuds", "Product B": "Charging Cable", "Frequency %": 47 }
+        ]
+      }
+    }
+  ]
+}
