@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "dc59f3d8-638d-4ee5-bf33-30fc88a916b3",
+		"name": "Lumibyte Chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25155637"
+	},
+	"item": [
+		{
+			"name": "Start / Create Chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/chat/new",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chat",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ask Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\" : \"What are the top-performing marketing campaigns\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/chat/question/aae2c05b-49e4-41d2-8d93-9b9b261591d2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chat",
+						"question",
+						"aae2c05b-49e4-41d2-8d93-9b9b261591d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/chat/sessions",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chat",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Session History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/chat/8f595d78-a402-48d3-9e18-bdf3f84b4bf8",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chat",
+						"8f595d78-a402-48d3-9e18-bdf3f84b4bf8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like/Dislike Response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messageId\" : 1760703246101,\r\n    \"value\" : \"like\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/chat/like-dislike/aae2c05b-49e4-41d2-8d93-9b9b261591d2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chat",
+						"like-dislike",
+						"aae2c05b-49e4-41d2-8d93-9b9b261591d2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": ""
+		}
+	]
+}
