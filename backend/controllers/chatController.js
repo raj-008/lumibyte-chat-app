@@ -28,8 +28,8 @@ exports.askQuestion = asyncErrorHandler(async (req, res, next) => {
 
   const response = mockData.responses.find((r) => r.question.toLowerCase() === question.toLowerCase()) || { answer: { description: "Sorry, No data found for your query.", table: [] } };
 
-  session.history.push({ role: "user", content: question });
-  session.history.push({ role: "bot", content: response.answer.description, table: response.answer.table });
+  session.history.push({ id: Date.now(), role: "user", content: question });
+  session.history.push({ id: Date.now(), role: "bot", content: response.answer.description, table: response.answer.table });
 
   return sendResponse(res, "Answer send successfully", session);
 });
@@ -44,6 +44,20 @@ exports.getSessionHistory = asyncErrorHandler(async (req, res, next) => {
   const { sessionId } = req.params;
   const session = sessions.find((s) => s.id === sessionId);
   if (!session) return next(new CustomError("Session not found", 404));
+
+  return sendResponse(res, "Session history retrived successfully", session.history);
+});
+
+exports.likeDislikeResponse = asyncErrorHandler(async (req, res, next) => {
+  const { sessionId } = req.params;
+  const { messageId, isliked } = req.body;
+
+  const session = sessions.find((s) => s.id === sessionId);
+  if (!session) return next(new CustomError("Session not found", 404));
+
+  const response = session.history.find((message) => message.id === messageId && message.role === "bot");
+  if (!response) return next(new CustomError("Message not found", 404));
+  response.isliked = isliked;
 
   return sendResponse(res, "Session history retrived successfully", session.history);
 });

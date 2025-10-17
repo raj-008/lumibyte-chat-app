@@ -17,7 +17,7 @@ const SideBar = ({ collapsed, setCollapsed }) => {
       setSessions(data);
     } catch (error) {
       console.error("Failed to load sessions:", error);
-      displayError(error.response?.data?.message || "Failed to fetch chat history.");
+      displayError(error.response?.data?.message || "Failed to fetch sessions.");
     }
   };
 

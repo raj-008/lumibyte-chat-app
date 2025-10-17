@@ -56,5 +56,16 @@ export const useChat = () => {
     }
   };
 
-  return { messages, loading, sendMessage };
+  const handleLikeDislike = async (messageId, isliked) => {
+    try {
+      await axios.post(`${apiUrl}/chat/like-dislike/${sessionId}`, { messageId, isliked });
+
+      setMessages((prev) => prev.map((msg) => (msg.id === messageId ? { ...msg, isliked: isliked } : msg)));
+    } catch (error) {
+      console.error("Failed to update like/dislike:", error);
+      displayError(error.response?.data?.message || "Failed to update like/dislike.");
+    }
+  };
+
+  return { messages, loading, sendMessage, handleLikeDislike };
 };

@@ -5,17 +5,13 @@ import { useChat } from "../hooks/useChat";
 const Chat = () => {
   const [input, setInput] = useState("");
   const scrollRef = useRef(null);
-  const { messages, loading, sendMessage } = useChat();
+  const { messages, loading, sendMessage, handleLikeDislike } = useChat();
 
   const handleSend = async () => {
     const trimmedMessage = input.trim();
     if (!trimmedMessage || loading) return;
     await sendMessage(trimmedMessage);
     setInput("");
-  };
-
-  const handleLikeDislike = (id, value) => {
-    sendMessage((prev) => prev.map((msg) => (msg.id === id ? { ...msg, liked: value } : msg)));
   };
 
   useEffect(() => {
